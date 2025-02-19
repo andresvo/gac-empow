@@ -8,12 +8,13 @@ import ColoresExterior from "../components/ColoresExterior.astro";
 import Equipamiento from "../components/Equipamiento.astro";
 import Seguridad from "../components/Seguridad.astro";
 import Especificaciones from "../components/Especificaciones.astro";
+import "../styles/custom.scss"
 ---
 
 <Layout title="GAC EMPOW">
-  <main class="mx-auto max-w-lg xl:max-w-screen-xl px-4 poppins-regular">
+  <main class="mx-auto max-w-lg xl:max-w-screen-xl px-4 poppins-regular text-white">
     <section
-      class="grid grid-cols-7 my-8 xl:my-20 bg-[#f5f5f5] bg-[url('/empow/img/fondo-cta-m.jpg')] xl:bg-[url('/empow/img/fondo-cta.jpg')] bg-cover bg-[center_right_1.5rem] xl:bg-contain bg-no-repeat xl:aspect-[1440/500]"
+      class="grid grid-cols-7 my-8 xl:my-20 bg-[#34333b] bg-[url('/empow/img/fondo-cta-m.jpg?v=2')] xl:bg-[url('/empow/img/fondo-cta.jpg?v=2')] bg-cover bg-[center_right_1.5rem] xl:bg-contain bg-no-repeat xl:aspect-[1440/500]"
     >
       <div class="col-span-3 xl:col-span-4"></div>
       <div
@@ -22,11 +23,11 @@ import Especificaciones from "../components/Especificaciones.astro";
         <img
           src="/empow/img/logo-modelo.svg"
           alt="GAC EMPOW"
-          class="max-w-32 xl:max-w-full mb-8"
+          class="max-w-32 xl:max-w-full lg:mb-8 lg:mt-0 my-4"
         />
         <a
           href="https://store.gacmotor.cl/"
-          class="block border border-neutral-400 rounded-full px-2 xl:px-8 py-2 uppercase poppins-medium text-xs xl:text-base text-center"
+          class="block border border-neutral-400 text-white rounded-full px-8 py-2 uppercase poppins-medium text-xs xl:text-base text-center"
           >Comprar</a
         >
         <a
@@ -95,7 +96,7 @@ import Especificaciones from "../components/Especificaciones.astro";
         </h2>
         <div class="mt-10">
           <h3
-            class="pt-1 pb-3 pl-6 bg-black text-white poppins-bold text-2xl rounded-tr-xl tab relative"
+            class="pt-1 pb-3 pl-6 bg-[#34333c] text-white poppins-bold text-2xl rounded-tr-xl tab relative"
           >
             GAC EMPOW
           </h3>
@@ -124,7 +125,7 @@ import Especificaciones from "../components/Especificaciones.astro";
                 <td>Total bonos</td>
                 <td class="text-right">$ 1.000.000</td>
               </tr>
-              <tr>
+              <tr class="precio-final">
                 <td class="bg-black text-white">Precio final con bonos</td>
                 <td class="text-right bg-black text-white">$ 19.990.000</td>
               </tr>
@@ -153,13 +154,17 @@ import Especificaciones from "../components/Especificaciones.astro";
       width: 100%;
       border-collapse: collapse;
       th {
-        background-color: #f6f6f6;
+        background-color: #1e1d23;
         border: 1px solid #dbdbdb;
         text-align: left;
         padding: 0.6rem 1rem 0.6rem 1.5rem;
       }
+      tr.precio-final td{
+        background-color: #34333c !important;
+      }
       td {
         border-top: 1px solid #dbdbdb;
+        background-color: #1e1d23;
         padding: 0.5rem;
         @media (min-width: 1280px) {
           padding: 0.9rem;
@@ -182,7 +187,7 @@ import Especificaciones from "../components/Especificaciones.astro";
       left: 0;
       width: 180px;
       height: 20px;
-      background-color: black;
+      background-color: #34333c;
       border-top-left-radius: 0.75rem;
       border-top-right-radius: 0.75rem;
     }
@@ -194,7 +199,7 @@ import Especificaciones from "../components/Especificaciones.astro";
       left: 164px;
       width: 20px;
       height: 30px;
-      background-color: black;
+      background-color: #34333c;
       border-top-right-radius: 0.75rem;
       transform: rotate(-45deg);
     }
